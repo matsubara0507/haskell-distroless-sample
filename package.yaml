@@ -1,5 +1,5 @@
 name:                haskell-distroless-sample
-version:             0.1.0.0
+version:             1.0.0
 github:              "matsubara0507/haskell-distroless-sample"
 license:             BSD3
 author:              "MATSUBARA Nobutada"
@@ -8,13 +8,20 @@ copyright:           "2022 MATSUBARA Nobutada"
 
 extra-source-files:
 - README.md
-- ChangeLog.md
 
 description:         Please see the README on GitHub at <https://github.com/matsubara0507/haskell-distroless-sample#readme>
+
+default-extensions:
+- GHC2021
+- DataKinds
+- NoFieldSelectors
+- OverloadedRecordDot
+- OverloadedStrings
 
 dependencies:
 - base >= 4.7 && < 5
 - servant-server
+- warp
 
 executables:
   sample:
