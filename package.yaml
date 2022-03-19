@@ -16,12 +16,6 @@ dependencies:
 - base >= 4.7 && < 5
 - servant-server
 
-library:
-  source-dirs: src
-
 executables:
-  haskell-distroless-sample-exe:
-    main:                Main.hs
-    source-dirs:         app
-    dependencies:
-    - haskell-distroless-sample
+  sample:
+    main: Main.hs
