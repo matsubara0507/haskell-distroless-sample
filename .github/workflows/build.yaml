@@ -40,5 +40,5 @@ jobs:
       run: stack --system-ghc --local-bin-path=./bin install --ghc-options '-optl-static -fPIC -optc-Os'
     - name: Build image
       run: |
-      docker build -t sample-image --build-arg local_bin_path=./bin -f Dockerfile
-      docker run --rm sample-image --version
+        docker build -t sample-image --build-arg local_bin_path=./bin -f Dockerfile
+        docker run --rm sample-image --version
