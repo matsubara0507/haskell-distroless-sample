@@ -1,0 +1,27 @@
+name:                haskell-distroless-sample
+version:             0.1.0.0
+github:              "matsubara0507/haskell-distroless-sample"
+license:             BSD3
+author:              "MATSUBARA Nobutada"
+maintainer:          "nobutada0507@gmail.com"
+copyright:           "2022 MATSUBARA Nobutada"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description:         Please see the README on GitHub at <https://github.com/matsubara0507/haskell-distroless-sample#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- servant-server
+
+library:
+  source-dirs: src
+
+executables:
+  haskell-distroless-sample-exe:
+    main:                Main.hs
+    source-dirs:         app
+    dependencies:
+    - haskell-distroless-sample

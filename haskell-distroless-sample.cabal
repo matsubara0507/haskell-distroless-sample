@@ -1,0 +1,48 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           haskell-distroless-sample
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/matsubara0507/haskell-distroless-sample#readme>
+homepage:       https://github.com/matsubara0507/haskell-distroless-sample#readme
+bug-reports:    https://github.com/matsubara0507/haskell-distroless-sample/issues
+author:         MATSUBARA Nobutada
+maintainer:     nobutada0507@gmail.com
+copyright:      2022 MATSUBARA Nobutada
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/matsubara0507/haskell-distroless-sample
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_haskell_distroless_sample
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , servant-server
+  default-language: Haskell2010
+
+executable haskell-distroless-sample-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_distroless_sample
+  hs-source-dirs:
+      app
+  build-depends:
+      base >=4.7 && <5
+    , haskell-distroless-sample
+    , servant-server
+  default-language: Haskell2010
