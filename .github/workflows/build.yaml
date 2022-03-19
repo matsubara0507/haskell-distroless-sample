@@ -35,9 +35,9 @@ jobs:
         stack-version: 'latest'
 
     - name: Install dependencies
-      run: stack --system-ghc build --only-dependencies
+      run: stack --docker build --only-dependencies
     - name: Build binary
-      run: stack --system-ghc --local-bin-path=./bin install --ghc-options '-optl-static -fPIC -optc-Os'
+      run: stack --docker --local-bin-path=./bin install --ghc-options '-optl-static -fPIC -optc-Os'
     - name: Build image
       run: |
         docker build -t sample-image --build-arg local_bin_path=./bin -f Dockerfile
